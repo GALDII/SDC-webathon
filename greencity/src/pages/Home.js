@@ -44,9 +44,10 @@ const Home = () => {
 
   return (
     <div className="space-y-20 md:space-y-28 pb-10">
+      {/* Hero Section */}
       <div 
         className="relative text-white rounded-lg shadow-xl -mt-8 -mx-4 md:-mx-8 h-[70vh] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center"
-        style={{ backgroundImage: "url(/images/windmill.jpeg)" }}
+        style={{ backgroundImage: "url(/Images/windmill.jpeg)" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
         <div className="relative z-10 animate-fade-in-up">
@@ -64,6 +65,8 @@ const Home = () => {
           </NavLink>
         </div>
       </div>
+
+      {/* Introduction Section with SDG Image */}
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
@@ -76,10 +79,12 @@ const Home = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <img src="/images/sdg11.png" alt="Sustainable Cities and Communities Goal 11" className="w-64 h-64 rounded-lg shadow-2xl object-cover transform hover:scale-105 transition-transform duration-300" />
+            <img src="/Images/sdg11.png" alt="Sustainable Cities and Communities Goal 11" className="w-64 h-64 rounded-lg shadow-2xl object-cover transform hover:scale-105 transition-transform duration-300" />
           </div>
         </div>
       </div>
+      
+      {/* Key Statistics Section */}
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our City's Goals</h2>
         <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -100,6 +105,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Features Section */}
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Explore & Get Involved</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -118,9 +125,11 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+      {/* SDG Goals Image Section */}
       <div className="max-w-4xl mx-auto px-4 text-center">
          <h2 className="text-3xl font-bold text-gray-800 mb-8">Part of a Global Mission</h2>
-         <img src="/images/SDG_all_goals.webp" alt="All Sustainable Development Goals" className="rounded-lg shadow-lg object-contain w-full"/>
+         <img src="/Images/SDG_all_goals.webp" alt="All Sustainable Development Goals" className="rounded-lg shadow-lg object-contain w-full"/>
       </div>
 
     </div>
