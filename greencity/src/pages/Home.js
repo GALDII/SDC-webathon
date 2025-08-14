@@ -44,6 +44,7 @@ const Home = () => {
 
   return (
     <div className="space-y-20 md:space-y-28 pb-10">
+      {/* Hero Section */}
       <div 
         className="relative text-white rounded-lg shadow-xl -mt-8 -mx-4 md:-mx-8 h-[70vh] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center"
         style={{ backgroundImage: "url(/images/windmill.jpeg)" }}
@@ -65,6 +66,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Introduction Section with SDG Image */}
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
@@ -81,7 +83,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      
+      {/* Key Statistics Section */}
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our City's Goals</h2>
         <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -102,7 +105,32 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <img src="SDG_all_goals.webp" alt="SDG 11 Information" className="rounded-lg shadow-lg object-contain max-h-64"/>
+
+      {/* Features Section */}
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Explore & Get Involved</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {features.map((feature) => (
+            <NavLink 
+              key={feature.title}
+              to={feature.path} 
+              className="group block p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div className={`w-16 h-16 rounded-full flex items-center justify-center ${feature.color} mb-4 transition-transform group-hover:scale-110`}>
+                {feature.icon}
+              </div>
+              <h3 className="font-bold text-xl text-gray-800 mb-2">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      {/* SDG Goals Image Section */}
+      <div className="max-w-4xl mx-auto px-4 text-center">
+         <h2 className="text-3xl font-bold text-gray-800 mb-8">Part of a Global Mission</h2>
+         <img src="/images/SDG_all_goals.webp" alt="All Sustainable Development Goals" className="rounded-lg shadow-lg object-contain w-full"/>
+      </div>
 
     </div>
   );
